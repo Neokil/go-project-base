@@ -25,7 +25,7 @@ func FromFile(path string) (c *Config, err error) {
 }
 
 func ToFile(path string, c *Config) error {
-	b, err := json.MarshalIndent(&c, "", " ")
+	b, err := json.MarshalIndent(&c, "", "    ")
 	if err != nil {
 		return err
 	}
